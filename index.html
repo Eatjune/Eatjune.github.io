@@ -262,6 +262,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/编程基础2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EatJune">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hoepy Studio">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/11/编程基础2/" itemprop="url">编程基础2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-11T21:28:59+08:00">
+                2018-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">基础知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/11/编程基础2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/11/编程基础2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="关键字与语句分割符"><a href="#关键字与语句分割符" class="headerlink" title="关键字与语句分割符"></a>关键字与语句分割符</h3><p>说到关键字与语句分割符基本上所有碰过学过点编程都懂，但是这里还是扩展下知识。<br>关键字是程序自身保留的一些固定的词组，用来识别代码的<code>结构与组织</code>,而语句分割符也是用来整理代码结构和组织的，不同关键字的是这个是符号，关键字是单词/词组。<br>上文所说的<code>结构和组织</code>两点非常重要，因为C语言本身就是个严谨的结构型语言，而关键字和语句分割符对编程语言的结构化来说也有着非常重要的作用，就像电话号你可以随便选，但是不能用110这个号的意思一样。</p>
+<blockquote>
+<p>2011年10月12日，C语言之父丹尼斯·里奇辞世，在众多的国际互动论坛上，计算机爱好者们以特有的方式纪念这位编程语言的重要奠基人。许多网友的发帖中没有片言只字，仅仅留下一个分号“；”。在C语言中，分号标志着一行指令语句的结束，网友们以此来悼念“C语言之父”，美国著名计算机专家丹尼斯·里奇（Dennis Ritchie）所引领的时代悄然远去。</p>
+</blockquote>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>与关键字对应的符号，即可由程序员自定义的符号（不是变量）。一般不建议用缩写，可用Pascal风格或Camel大小写风格，同时需要注意几点。</p>
+<ul>
+<li>标识符要清晰而不是简短</li>
+<li>不要使用缩写</li>
+<li>不要用不被广泛接受的缩写词，即使广泛也尽量不要用</li>
+</ul>
+<h3 id="解释型语言-编译型语言"><a href="#解释型语言-编译型语言" class="headerlink" title="解释型语言/编译型语言"></a>解释型语言/编译型语言</h3><ul>
+<li>编译型语言即指由源代码编译完成后直接在机器上就可执行的语言，一般编译后为机器语言。</li>
+<li>解释型语言则是不通过编译，而是在运行时，边运行边转换为机器语言供机器识别运行。</li>
+</ul>
+<p>基本上来说就是编译型快速，解释型灵活，就像做游戏里是牺牲空间还是时间的问题差不多。<br>逛知乎也看到个神比喻：就像吃饭是做好一桌菜再吃，还是吃火锅。真的非常形象，哈哈:D</p>
+<h3 id="Net托管"><a href="#Net托管" class="headerlink" title=".Net托管"></a>.Net托管</h3><p>类似java的虚拟机，即将源代码编译为中间代码IL(java中即为.class文件内代码)，在根据平台不同，编译为目标代码/机器码（java内为运行时解释.class文件代码）。所以类似java虚拟机机制，但是区别是c#是两次编译，即源代码-&gt;MSIL-&gt;目标代码，但是java是编译后通过jvm解释代码或运用JIT等技术执行程序。</p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>泛型是一种程序设计语言的特性，简而言之就是将类型作为参数，在运行时可获得该具体类型。<br><a href="https://www.cnblogs.com/chengzixin/p/6672661.html" target="_blank" rel="noopener">相关延伸：C#非泛型集合和泛型集合详解</a></p>
+<h3 id="IEnumerable和IEnumerator"><a href="#IEnumerable和IEnumerator" class="headerlink" title="IEnumerable和IEnumerator"></a>IEnumerable和IEnumerator</h3><p>这两个东西是对集合进行操作的接口，而且集合对象都为可枚举类型，基本所有C#集合都继承自这两个接口。<br>IEnumerator中yield return本身也是个语法糖，可以用来返回迭代器的数值，并以yield break结尾。<br>引用下百度知道看到的答案:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public IEnumerable&lt;String&gt; SayHappyNewYear()&#123;</span><br><span class="line">    yield return &quot;恭&quot;; // yield在这里充当隐式的IEnumerator接口</span><br><span class="line">    yield return &quot;喜&quot;;</span><br><span class="line">    yield return &quot;发&quot;;</span><br><span class="line">    yield return &quot;财&quot;;</span><br><span class="line">    yield break;    // 向迭代器发出结束迭代的信号</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void Main(string[] args)&#123;</span><br><span class="line">   foreach (String item in (new Program()).SayHappyNewYear())</span><br><span class="line">   &#123;</span><br><span class="line">    Console.Write(item);</span><br><span class="line">   &#125;</span><br><span class="line">    </span><br><span class="line">   Console.ReadKey(true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>顺便说一句，IEnumerator在Unity中可以用于每次Update之后，即在Update中独立运行某一迭代函数(类似Update中的update)，利用yield return 返回帧，直到yield break退出该迭代器,原理基本类似C#代码本意。</p>
+<p><a href="https://blog.csdn.net/u010501161/article/details/44024957" target="_blank" rel="noopener">相关扩展:IEnumerable和IEnumerator详解</a></p>
+<h3 id="Linq"><a href="#Linq" class="headerlink" title="Linq"></a>Linq</h3><p>LINQ,Language Intergrated Query语言，简单来说就是在编写C#和VB语言时，允许以使用查询数据库的方式来操作内存数据，非常便捷。<br>代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int[] x = &#123; 0, 9, 2, 3, 5 &#125;;</span><br><span class="line">var x1 = from u  in x</span><br><span class="line">         where u &gt; 0</span><br><span class="line">         select u;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_34720759/article/details/78575328?locationNum=6&amp;fps=1" target="_blank" rel="noopener">相关知识：C#中Linq的使用</a><br><a href="">相关知识：MSDN-Linq</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/编程基础1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1542,7 +1715,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1564,7 +1737,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
