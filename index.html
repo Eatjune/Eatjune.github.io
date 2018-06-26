@@ -262,6 +262,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/编程基础8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EatJune">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hoepy Studio">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/26/编程基础8/" itemprop="url">编程基础8</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T13:02:28+08:00">
+                2018-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">基础知识</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础知识/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/26/编程基础8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/26/编程基础8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="C-接口-Interface"><a href="#C-接口-Interface" class="headerlink" title="C#接口 - Interface"></a>C#接口 - Interface</h2><h4 id="interface与abstract对比"><a href="#interface与abstract对比" class="headerlink" title="interface与abstract对比"></a>interface与abstract对比</h4><p>interface功能与abstract类似，都是为多态性考虑而设计的，两者区别在于：  </p>
+<ul>
+<li>interface不能写入字段，不能有具体实现，abstract则相反。</li>
+<li>interface支持多继承，abstract单继承。</li>
+<li>interface内所有方法和属性在子类(实现该interface的类)中都得有具体实现，abstract则标有abstract关键字的才需要在子类中有具体实现。</li>
+</ul>
+<p>从上述几个角度可以看出，interface可为多继承，限制方法签名，以行为为主体的上下文中使用。<br>而abstract则可在单继承，类为主体的上下文中使用，可以说各有各用途。同时，这两者也可结合使用，比如在基类派生的子类需要多继承时，则可继承抽象类，并用interface扩充子类。</p>
+<h4 id="interface的显示和隐式实现"><a href="#interface的显示和隐式实现" class="headerlink" title="interface的显示和隐式实现"></a>interface的显示和隐式实现</h4><p>隐式实现是比较常用的一种方法，即在实现该接口的类中，以public override void xxxxx()的方式实现接口中的方法。  </p>
+<p>而显示实现，则用于在使用多个接口的类中，多个接口中方法签名重复时，用于表明各个接口方法时使用。形似:public void IFunc.xxxxx()。其中”IFunc”为接口名。</p>
+<p>使用显示实现需要注意的是，调用该类中显示实现的接口方法需要指定该接口，而不能引用该类。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Interface IExample</span><br><span class="line">&#123;</span><br><span class="line">    void Func();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class A:IExample</span><br><span class="line">&#123;</span><br><span class="line">    public void IExample.Func()&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Main</span><br><span class="line">&#123;</span><br><span class="line">    static void main()</span><br><span class="line">    &#123;</span><br><span class="line">        A iExample1 = new A();</span><br><span class="line">        //错误，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        iExample1.Func();</span><br><span class="line">        //正确，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        (iExample1 as IExample).Func();</span><br><span class="line"></span><br><span class="line">        //正确，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        IExample iExample2 = new A();</span><br><span class="line">        iExample2.Func();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>c#中数据类型分为值类型和引用类型，引用类型很简单就是平时经常用的类，值类型在c#中有一些默认的值类型如：int,float,double,char等。(string是引用类型)<br>当然object为所有值类型和引用类型的基类。<a href="https://www.cnblogs.com/GreenLeaves/p/7479412.html" target="_blank" rel="noopener">C# 终极基类Object介绍</a><br>而值类型也称为结构struct，与类class对应。（这里的struct与c++中不同）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public struct Vector</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>一般来说因为结构不能传递引用，复制值类型数据时都是在栈上直接复制数据的，消耗比引用类型的地址大，(值类型不存在gc问题),且存在装箱拆箱问题，所以除了预定义的一些值类型外不会经常使用。</p>
+<h4 id="装箱-拆箱"><a href="#装箱-拆箱" class="headerlink" title="装箱 拆箱"></a>装箱 拆箱</h4><p>装箱：值类型-&gt;引用类型，如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 32;</span><br><span class="line">object thing;</span><br><span class="line">thing = a;</span><br></pre></td></tr></table></figure></p>
+<p>拆箱：引用类型-&gt;值类型，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int b;</span><br><span class="line">b = (int)thing;</span><br></pre></td></tr></table></figure></p>
+<p>这两个动作比较耗费效率，所以尽量少用。</p>
+<p>具体关于结构的资料可以参考: <a href="https://www.cnblogs.com/kissdodog/archive/2013/05/11/3072832.html" target="_blank" rel="noopener">c# 结构体 struct</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/18/编程基础7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1755,182 +1933,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/编程基础1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="EatJune">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hoepy Studio">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/10/编程基础1/" itemprop="url">编程基础1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T22:59:08+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础知识/" itemprop="url" rel="index">
-                    <span itemprop="name">基础知识</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础知识/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/10/编程基础1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/10/编程基础1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>基础这块经常会忘，这里顺便做个笔记。</p>
-<hr>
-<h2 id="基础相关"><a href="#基础相关" class="headerlink" title="基础相关"></a>基础相关</h2><h3 id="高级语言，低级语言，机器语言"><a href="#高级语言，低级语言，机器语言" class="headerlink" title="高级语言，低级语言，机器语言"></a>高级语言，低级语言，机器语言</h3><p>机器语言即机器可以直接识别的语言，比如100100<br>低级语言包括汇编语言和机器语言，汇编是面向处理器的语言，它一般用来操作寄存器存储器，是一种底层的语言；<br>高级语言则是易于人理解的语言，例如c，c++，java等等；</p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>将高级语言转化为机器语言的过程，即为编译，编译本身不执行源代码，最后生成的文件成为目标代码/可执行代码。貌似编译也可以理解为从一种语言转化为另一种，不一定非得是机器语言。</p>
-<p><a href="https://blog.csdn.net/u011404663/article/details/50749645" target="_blank" rel="noopener">参考文章</a></p>
-<h2 id="C-相关"><a href="#C-相关" class="headerlink" title="C#相关"></a>C#相关</h2><h3 id="Net"><a href="#Net" class="headerlink" title=".Net"></a>.Net</h3><p>.net是微软的一个新型技术平台，而.net应用则需要运行于.net framwork之上，（即是由.net框架类库编写，运行于CLR(公共语言运行时)之上的应用）。</p>
-<h3 id="IL"><a href="#IL" class="headerlink" title="IL"></a>IL</h3><p>是微软在.NET平台上发展处的一种中间语言，从支持的各种高级语言最终转化为自己的语言。</p>
-<p><a href="https://www.cnblogs.com/zery/p/3366175.html" target="_blank" rel="noopener">参考文章:如何理解学习IL语言</a></p>
-<h3 id="CLR"><a href="#CLR" class="headerlink" title="CLR"></a>CLR</h3><p>公共语言运行时，Common Language Runetime，类似Java的虚拟机环境，负责资源管理，内存分配和垃圾收集，并保证底层与应用的分离。</p>
-<h3 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h3><p>通用语言基础结构，Common Language Infrastructure，是CLR的子集，负责对编译成MSIL(Microso Interface Language)代码的应用程序的运行环境进行管理。也可以说是加载编译运行转化为IL代码的那一部分，是CLR的灵魂。</p>
-<p><a href="https://blog.csdn.net/gao271003105/article/details/72875093" target="_blank" rel="noopener">更多资料</a></p>
-<h3 id="JIT"><a href="#JIT" class="headerlink" title="JIT"></a>JIT</h3><p>Just In Time，是.NET中边运行边编译的一种机制。如果看过IL代码的话，会发现IL代码过于复杂，不适合面向对象编程(IL本身支持面向对象)，所以就发展出了C#语言，而编译器会将C#语言翻译成IL语言。在IL代码运行中时，JIT就会将运行到的方法转化成机器语言执行。</p>
-<h3 id="程序集"><a href="#程序集" class="headerlink" title="程序集"></a>程序集</h3><p>简而言之是项目编译之后形成的dll文件和可执行文件中封装成的程序代码的集合。</p>
-<p><a href="https://blog.csdn.net/c18805079173/article/details/46647197" target="_blank" rel="noopener">更多资料</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1985,7 +1987,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2007,7 +2009,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

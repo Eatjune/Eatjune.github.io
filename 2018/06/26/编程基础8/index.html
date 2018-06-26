@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习,信息结构," />
+  <meta name="keywords" content="编程基础,C#,接口,值类型,装箱拆箱," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="上节讲到了整体性学习的整个流程步骤，这次将会简要谈掉获取的知识的信息结构分类，谈完这章下节就会开始讲到具体的学习的技巧方法了。 信息结构信息结构是将需要学习的知识进行一个大致分类的前提基础，也是为了能更好的针对所接受所学习的知识类型来选择相对应的方法处理。  随意信息随意信息即不依附于任何逻辑理念的一些名词性质的信息，比如人体有xxx根骨头，历史上xxx名人出生于xxx年，这些都是没有规律和逻辑可">
-<meta name="keywords" content="学习,信息结构">
+<meta name="description" content="C#接口 - Interfaceinterface与abstract对比interface功能与abstract类似，都是为多态性考虑而设计的，两者区别在于：    interface不能写入字段，不能有具体实现，abstract则相反。 interface支持多继承，abstract单继承。 interface内所有方法和属性在子类(实现该interface的类)中都得有具体实现，abstrac">
+<meta name="keywords" content="编程基础,C#,接口,值类型,装箱拆箱">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习的学习6">
-<meta property="og:url" content="http://yoursite.com/2018/06/03/学习的学习6/index.html">
+<meta property="og:title" content="编程基础8">
+<meta property="og:url" content="http://yoursite.com/2018/06/26/编程基础8/index.html">
 <meta property="og:site_name" content="Hoepy Studio">
-<meta property="og:description" content="上节讲到了整体性学习的整个流程步骤，这次将会简要谈掉获取的知识的信息结构分类，谈完这章下节就会开始讲到具体的学习的技巧方法了。 信息结构信息结构是将需要学习的知识进行一个大致分类的前提基础，也是为了能更好的针对所接受所学习的知识类型来选择相对应的方法处理。  随意信息随意信息即不依附于任何逻辑理念的一些名词性质的信息，比如人体有xxx根骨头，历史上xxx名人出生于xxx年，这些都是没有规律和逻辑可">
+<meta property="og:description" content="C#接口 - Interfaceinterface与abstract对比interface功能与abstract类似，都是为多态性考虑而设计的，两者区别在于：    interface不能写入字段，不能有具体实现，abstract则相反。 interface支持多继承，abstract单继承。 interface内所有方法和属性在子类(实现该interface的类)中都得有具体实现，abstrac">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-03T16:06:29.668Z">
+<meta property="og:updated_time" content="2018-06-26T05:04:51.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习的学习6">
-<meta name="twitter:description" content="上节讲到了整体性学习的整个流程步骤，这次将会简要谈掉获取的知识的信息结构分类，谈完这章下节就会开始讲到具体的学习的技巧方法了。 信息结构信息结构是将需要学习的知识进行一个大致分类的前提基础，也是为了能更好的针对所接受所学习的知识类型来选择相对应的方法处理。  随意信息随意信息即不依附于任何逻辑理念的一些名词性质的信息，比如人体有xxx根骨头，历史上xxx名人出生于xxx年，这些都是没有规律和逻辑可">
+<meta name="twitter:title" content="编程基础8">
+<meta name="twitter:description" content="C#接口 - Interfaceinterface与abstract对比interface功能与abstract类似，都是为多态性考虑而设计的，两者区别在于：    interface不能写入字段，不能有具体实现，abstract则相反。 interface支持多继承，abstract单继承。 interface内所有方法和属性在子类(实现该interface的类)中都得有具体实现，abstrac">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/03/学习的学习6/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/26/编程基础8/"/>
 
 
 
 
 
-  <title>学习的学习6 | Hoepy Studio</title>
+  <title>编程基础8 | Hoepy Studio</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/03/学习的学习6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/编程基础8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="EatJune">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习的学习6</h1>
+          <h1 class="post-title" itemprop="name headline">编程基础8</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-03T23:37:30+08:00">
-                2018-06-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T13:02:28+08:00">
+                2018-06-26
               </time>
             
 
@@ -315,8 +315,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">基础知识</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础知识/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
                   </a>
                 </span>
 
@@ -333,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/03/学习的学习6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/03/学习的学习6/" itemprop="commentCount"></span>
+                <a href="/2018/06/26/编程基础8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/26/编程基础8/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -362,16 +373,22 @@
       
 
       
-        <p>上节讲到了整体性学习的整个流程步骤，这次将会简要谈掉获取的知识的信息结构分类，谈完这章下节就会开始讲到具体的学习的技巧方法了。</p>
-<h3 id="信息结构"><a href="#信息结构" class="headerlink" title="信息结构"></a>信息结构</h3><p>信息结构是将需要学习的知识进行一个大致分类的前提基础，也是为了能更好的针对所接受所学习的知识类型来选择相对应的方法处理。</p>
+        <h2 id="C-接口-Interface"><a href="#C-接口-Interface" class="headerlink" title="C#接口 - Interface"></a>C#接口 - Interface</h2><h4 id="interface与abstract对比"><a href="#interface与abstract对比" class="headerlink" title="interface与abstract对比"></a>interface与abstract对比</h4><p>interface功能与abstract类似，都是为多态性考虑而设计的，两者区别在于：  </p>
 <ul>
-<li>随意信息<br>随意信息即不依附于任何逻辑理念的一些名词性质的信息，比如人体有xxx根骨头，历史上xxx名人出生于xxx年，这些都是没有规律和逻辑可言的。不过基本上除了些事实和日期，我觉得其他的就算是定义和规则也是有理可寻的。<br>而处理随意信息的难点就是这些信息是无法和其他信息建立联系的，如果不能建立联系，那就只能用以往死记硬背的方法存储在大脑之中了。<br>但是书内还是提供了几种方法：联想法，挂钩法，压缩法；<br>这里我就不翻到后面看了，看到再记上吧~</li>
-<li>观点信息<br>观点信息是人与人之间不同的理念所形成的信息。对于这种信息，我们需要花时间去理解两方观点的不同，从而对于收集信息的能力非常重要。</li>
-<li>过程信息<br>过程信息是指可以通过一些行动而逐渐了解认识的信息，一般对应于现实中的技术，类似工科生学的计算机程序啊，或者艺术生的绘画啊之类的。这些信息通常需要大量的练习去理解，不过好处在于你练得越多记得越深，理解的也越多越好。<br>处理这种信息的方法一般可以是：内在化，比喻法，图示法，模型纠错。</li>
-<li>具体信息<br>具体信息和抽象信息是一对，这里我觉得以这种方式分类的话，可以单独将这两类独立出来。<br>具体信息是指那种可以被现实的感官或者认知所感觉到看到触摸到的等等，都是客观存在的，这里我认为也可称为客观信息。比如心脏，火车，计算机的处理器等等。对于具体信息，我们可以直接进行联想来建立连接。</li>
-<li>抽象信息<br>抽象信息是对应于具体信息的另外一面，这里我认为也可称为主观信息。这些信息都是由一些不存在的事物，一般是人主观意识创造出来的一些信息。比如，数学里的符号，心理学上的意识概念，哲学里的“我思故我在”等等。这些信息不存在客观世界中，很难被理解，不过我觉得理解以后其实和具体(客观)信息一样，可以与很多其他信息建立联系。<br>同样的，比喻法和内在化也是解决其问题的一些方法技巧。</li>
+<li>interface不能写入字段，不能有具体实现，abstract则相反。</li>
+<li>interface支持多继承，abstract单继承。</li>
+<li>interface内所有方法和属性在子类(实现该interface的类)中都得有具体实现，abstract则标有abstract关键字的才需要在子类中有具体实现。</li>
 </ul>
-<h3 id="信息的强弱"><a href="#信息的强弱" class="headerlink" title="信息的强弱"></a>信息的强弱</h3><p>以上分的五种信息(其实我更想说成是3种或是2种:D)，随意信息是最弱的结构，在建立好模型后，也是大脑这个城市中最难与之开辟连接道路的地方，所以需要积极去寻找逻辑结构联系。<br>而具体和过程信息则是最强的，(其实他这里的具体信息应该是特指真实存在的个体，比如过程观点就不算个体，我想大概是这样吧？:D)他们会唤起我们的实际应用经验，所以最不容易忘记，最易使用。</p>
+<p>从上述几个角度可以看出，interface可为多继承，限制方法签名，以行为为主体的上下文中使用。<br>而abstract则可在单继承，类为主体的上下文中使用，可以说各有各用途。同时，这两者也可结合使用，比如在基类派生的子类需要多继承时，则可继承抽象类，并用interface扩充子类。</p>
+<h4 id="interface的显示和隐式实现"><a href="#interface的显示和隐式实现" class="headerlink" title="interface的显示和隐式实现"></a>interface的显示和隐式实现</h4><p>隐式实现是比较常用的一种方法，即在实现该接口的类中，以public override void xxxxx()的方式实现接口中的方法。  </p>
+<p>而显示实现，则用于在使用多个接口的类中，多个接口中方法签名重复时，用于表明各个接口方法时使用。形似:public void IFunc.xxxxx()。其中”IFunc”为接口名。</p>
+<p>使用显示实现需要注意的是，调用该类中显示实现的接口方法需要指定该接口，而不能引用该类。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Interface IExample</span><br><span class="line">&#123;</span><br><span class="line">    void Func();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class A:IExample</span><br><span class="line">&#123;</span><br><span class="line">    public void IExample.Func()&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Main</span><br><span class="line">&#123;</span><br><span class="line">    static void main()</span><br><span class="line">    &#123;</span><br><span class="line">        A iExample1 = new A();</span><br><span class="line">        //错误，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        iExample1.Func();</span><br><span class="line">        //正确，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        (iExample1 as IExample).Func();</span><br><span class="line"></span><br><span class="line">        //正确，调用显示实现的方法时只能使用接口而不能是实现类</span><br><span class="line">        IExample iExample2 = new A();</span><br><span class="line">        iExample2.Func();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>c#中数据类型分为值类型和引用类型，引用类型很简单就是平时经常用的类，值类型在c#中有一些默认的值类型如：int,float,double,char等。(string是引用类型)<br>当然object为所有值类型和引用类型的基类。<a href="https://www.cnblogs.com/GreenLeaves/p/7479412.html" target="_blank" rel="noopener">C# 终极基类Object介绍</a><br>而值类型也称为结构struct，与类class对应。（这里的struct与c++中不同）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public struct Vector</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>一般来说因为结构不能传递引用，复制值类型数据时都是在栈上直接复制数据的，消耗比引用类型的地址大，(值类型不存在gc问题),且存在装箱拆箱问题，所以除了预定义的一些值类型外不会经常使用。</p>
+<h4 id="装箱-拆箱"><a href="#装箱-拆箱" class="headerlink" title="装箱 拆箱"></a>装箱 拆箱</h4><p>装箱：值类型-&gt;引用类型，如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 32;</span><br><span class="line">object thing;</span><br><span class="line">thing = a;</span><br></pre></td></tr></table></figure></p>
+<p>拆箱：引用类型-&gt;值类型，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int b;</span><br><span class="line">b = (int)thing;</span><br></pre></td></tr></table></figure></p>
+<p>这两个动作比较耗费效率，所以尽量少用。</p>
+<p>具体关于结构的资料可以参考: <a href="https://www.cnblogs.com/kissdodog/archive/2013/05/11/3072832.html" target="_blank" rel="noopener">c# 结构体 struct</a></p>
 
       
     </div>
@@ -389,9 +406,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/编程基础/" rel="tag"># 编程基础</a>
           
-            <a href="/tags/信息结构/" rel="tag"># 信息结构</a>
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/接口/" rel="tag"># 接口</a>
+          
+            <a href="/tags/值类型/" rel="tag"># 值类型</a>
+          
+            <a href="/tags/装箱拆箱/" rel="tag"># 装箱拆箱</a>
           
         </div>
       
@@ -404,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/01/编程基础4/" rel="next" title="编程基础4">
-                <i class="fa fa-chevron-left"></i> 编程基础4
+              <a href="/2018/06/18/编程基础7/" rel="next" title="编程基础7">
+                <i class="fa fa-chevron-left"></i> 编程基础7
               </a>
             
           </div>
@@ -413,10 +436,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/06/编程基础5/" rel="prev" title="编程基础5">
-                编程基础5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息结构"><span class="nav-number">1.</span> <span class="nav-text">信息结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息的强弱"><span class="nav-number">2.</span> <span class="nav-text">信息的强弱</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-接口-Interface"><span class="nav-number">1.</span> <span class="nav-text">C#接口 - Interface</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#interface与abstract对比"><span class="nav-number">1.0.1.</span> <span class="nav-text">interface与abstract对比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#interface的显示和隐式实现"><span class="nav-number">1.0.2.</span> <span class="nav-text">interface的显示和隐式实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#值类型"><span class="nav-number">2.</span> <span class="nav-text">值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">2.0.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#装箱-拆箱"><span class="nav-number">2.0.2.</span> <span class="nav-text">装箱 拆箱</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
